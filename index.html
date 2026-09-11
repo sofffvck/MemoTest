@@ -3,19 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memotest Game</title>
+    <title>Memotest Sof</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
     <div class="game-container">
         <h1>Memotest</h1>
-        
+       
         <div class="stats-board">
             <div class="stat">Movimientos: <span id="moves">0</span></div>
             <button id="restart-btn">Reiniciar Juego</button>
         </div>
 
         <div class="grid-container" id="grid"></div>
+    </div>
+
+    <!-- Modal de Inicio -->
+    <div id="start-modal" class="modal">
+        <div class="modal-content">
+            <h2>✨ Memotest ✨</h2>
+            <p>Presiona el botón para comenzar</p>
+            <button id="start-btn">Comenzar Partida</button>
+            <div id="countdown" style="font-size: 2.5rem; margin-top: 15px; font-weight: bold;"></div>
+        </div>
+    </div>
+
+    <!-- Modal de Victoria -->
+    <div id="victory-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>🎉 ¡Felicidades! 🎉</h2>
+            <p>Completaste el juego en <span id="final-moves">0</span> movimientos.</p>
+            <button id="modal-restart-btn">Jugar de nuevo</button>
+        </div>
     </div>
 
     <script src="index.js"></script>
