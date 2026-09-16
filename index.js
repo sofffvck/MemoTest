@@ -23,7 +23,7 @@ function shuffle(array) {
 }
 
 function startCountdown() {
-    startBtn.style.display = 'none'; // Oculta el botón durante el conteo
+    startBtn.style.display = 'none'; 
     let count = 3;
     countdownDisplay.textContent = count;
 
@@ -35,10 +35,9 @@ function startCountdown() {
             countdownDisplay.textContent = "¡Ya!";
         } else {
             clearInterval(interval);
-            startModal.classList.add('hidden'); // Oculta el cartel de inicio
+            startModal.classList.add('hidden'); 
             countdownDisplay.textContent = '';
-            startBtn.style.display = 'inline-block'; // Restaura el botón para reinicios
-            lockBoard = false; // Desbloquea las cartas para jugar
+            startBtn.style.display = 'inline-block'; 
         }
     }, 1000);
 }
